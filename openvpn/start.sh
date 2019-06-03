@@ -191,4 +191,7 @@ if [[ -n "${LOCAL_NETWORK-}" ]]; then
   fi
 fi
 
+# used to start sabnzbdplus and point it too your configuration file and output to logfile.
+/usr/bin/sabnzbdplus -f /sabnzbd/sabnzbd.ini --pidfile /var/run/sabnzbdplus/pid > /var/log/sabnzbd.log 2?&1 &
+
 exec openvpn ${TRANSMISSION_CONTROL_OPTS} ${OPENVPN_OPTS} --config "${OPENVPN_CONFIG}"
