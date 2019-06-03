@@ -3,7 +3,9 @@
 [![Docker Automated build](https://img.shields.io/docker/automated/haugene/transmission-openvpn.svg)](https://hub.docker.com/r/haugene/transmission-openvpn/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/haugene/transmission-openvpn.svg)](https://hub.docker.com/r/haugene/transmission-openvpn/)
 
-This container contains OpenVPN and Transmission with a configuration
+Many thanks to haugene for the inspiration to add Sabnzbdplus to this repository.
+
+This container contains OpenVPN and Transmission and sabnzpdplus with a configuration
 where Transmission is running only when OpenVPN has an active tunnel.
 It bundles configuration files for many popular VPN providers to make the setup easier.
 
