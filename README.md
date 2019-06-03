@@ -22,7 +22,10 @@ To run the container use this command:
 
 ```
 $ docker run --cap-add=NET_ADMIN -d \
-              -v /your/storage/path/:/data \
+              #data is download dir
+	      -v /your/storage/path/:/data \
+	      #config is your specific configs
+	      -v /your/storage/path/:/config \
               -v /etc/localtime:/etc/localtime:ro \
               -e CREATE_TUN_DEVICE=true \
               -e OPENVPN_PROVIDER=PIA \
@@ -34,7 +37,7 @@ $ docker run --cap-add=NET_ADMIN -d \
               --log-driver json-file \
               --log-opt max-size=10m \
               -p 9091:9091 \
-              haugene/transmission-openvpn
+              mhutton81/sabmissionvpn
 ```
 
 You must set the environment variables `OPENVPN_PROVIDER`, `OPENVPN_USERNAME` and `OPENVPN_PASSWORD` to provide basic connection details.
